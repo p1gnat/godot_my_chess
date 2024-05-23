@@ -1,13 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716372336
+::res://::1716461151
 Alert.gd::GDScript::-1::1716315350::0::1::::<>PopupPanel<>::
 Alert.tscn::PackedScene::-1::1716315350::0::1::::<><>::res://Alert.gd
 Board.gd::GDScript::-1::1716315350::0::1::::Board<>Control<>::
 Board.tscn::PackedScene::7131460153277446905::1716315350::0::1::::<><>::res://Board.gd
-default_env.tres::Environment::3756266356469221598::1716315370::0::1::::<><>::
+default_env.tres::Environment::3756266356469221598::1716372339::0::1::::<><>::
 icon.png::CompressedTexture2D::4858106840360018046::1716315350::1716315362::1::::<><>::
 Main.gd::GDScript::-1::1716315350::0::1::::<>Control<>::
-Main.tscn::PackedScene::5198449343954680059::1716315370::0::1::::<><>::uid://c8usdvp4rr7d2::::res://Board.tscn<>res://Main.gd<>res://Alert.tscn<>uid://dl4s6x8gtvxk8::::res://engine/Engine.tscn<>uid://byu46yrpllged::::res://assets/start.png<>uid://cwborbub37eyr::::res://assets/end.png<>uid://t2ddb83ng7u7::::res://assets/play.png<>res://Promote.tscn
+Main.tscn::PackedScene::5198449343954680059::1716372339::0::1::::<><>::uid://c8usdvp4rr7d2::::res://Board.tscn<>res://Main.gd<>res://Alert.tscn<>uid://dl4s6x8gtvxk8::::res://engine/Engine.tscn<>uid://byu46yrpllged::::res://assets/start.png<>uid://cwborbub37eyr::::res://assets/end.png<>uid://t2ddb83ng7u7::::res://assets/play.png<>res://Promote.tscn
 piece.gd::GDScript::-1::1716315350::0::1::::Piece<>Node<>::
 Pieces.gd::GDScript::-1::1716315350::0::1::::<>GridContainer<>::
 Pieces.tscn::PackedScene::-1::1716315350::0::1::::<><>::res://Pieces.gd<>res://pieces/blackKnight.png<>res://pieces/blackQueen.png<>res://pieces/whiteKnight.png<>res://pieces/whitePawn.png<>res://pieces/blackBishop.png<>res://pieces/whiteQueen.png<>res://pieces/blackPawn.png<>res://pieces/blackRook.png<>res://pieces/blackKing.png<>res://pieces/whiteBishop.png<>res://pieces/whiteRook.png<>res://pieces/whiteKing.png

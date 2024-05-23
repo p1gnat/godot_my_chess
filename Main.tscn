@@ -36,7 +36,7 @@ theme_override_constants/separation = 20
 
 [node name="Start" type="Button" parent="VBox/HBox/VBox"]
 layout_mode = 2
-text = "PLAY"
+text = "ИГРАТЬ"
 
 [node name="Ponder" type="HBoxContainer" parent="VBox/HBox/VBox"]
 layout_mode = 2
@@ -44,7 +44,7 @@ theme_override_constants/separation = 20
 
 [node name="Label" type="Label" parent="VBox/HBox/VBox/Ponder"]
 layout_mode = 2
-text = "Move to ponder:"
+text = "Отправиться к:"
 
 [node name="Move" type="Label" parent="VBox/HBox/VBox/Ponder"]
 layout_mode = 2
@@ -60,7 +60,7 @@ layout_mode = 2
 
 [node name="Flip" type="Button" parent="VBox/HBox/Menu/Next"]
 layout_mode = 2
-text = "Next Move"
+text = "Следующий ход"
 icon = SubResource("1")
 
 [node name="Color" type="ColorRect" parent="VBox/HBox/Menu/Next"]
@@ -69,11 +69,11 @@ size_flags_horizontal = 3
 
 [node name="Load" type="Button" parent="VBox/HBox/Menu"]
 layout_mode = 2
-text = "Load"
+text = "Загрузить"
 
 [node name="Save" type="Button" parent="VBox/HBox/Menu"]
 layout_mode = 2
-text = "Save"
+text = "Сохранить"
 
 [node name="Options" type="VBoxContainer" parent="VBox/HBox"]
 layout_mode = 2
@@ -107,7 +107,7 @@ text = "Suggest moves"
 
 [node name="Reset" type="Button" parent="VBox/HBox/Options"]
 layout_mode = 2
-text = "Reset Board"
+text = "Сбросить доску"
 
 [node name="Grid" type="GridContainer" parent="VBox/HBox"]
 layout_mode = 2
@@ -117,7 +117,7 @@ columns = 2
 
 [node name="Label" type="Label" parent="VBox/HBox/Grid"]
 layout_mode = 2
-text = "Last move"
+text = "Последний ход"
 
 [node name="LastMove" type="Label" parent="VBox/HBox/Grid"]
 custom_minimum_size = Vector2(38, 0)
@@ -126,14 +126,14 @@ text = "c2c4"
 
 [node name="Label3" type="Label" parent="VBox/HBox/Grid"]
 layout_mode = 2
-text = "Moves"
+text = "Ходы"
 
 [node name="Moves" type="Label" parent="VBox/HBox/Grid"]
 layout_mode = 2
 
 [node name="Label5" type="Label" parent="VBox/HBox/Grid"]
 layout_mode = 2
-text = "Half moves"
+text = "Половина ходов"
 
 [node name="HalfMoves" type="Label" parent="VBox/HBox/Grid"]
 layout_mode = 2

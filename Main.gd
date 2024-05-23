@@ -62,20 +62,20 @@ func handle_state(event, msg = ""):
 						state = IDLE
 						handle_state(NEW_GAME)
 				ERROR:
-					alert("Unable to connect to Chess Engine!")
+					alert("Не получается подключится к Движку")
 					state = IDLE
 		STARTING:
 			match event:
 				DONE:
 					if msg == "readyok":
 						if white_next:
-							alert("White to begin")
+							alert("Белые начинайте")
 							state = PLAYER_TURN
 						else:
-							alert("Engine to begin")
+							alert("Движок начинайте")
 							prompt_engine()
 				ERROR:
-					alert("Lost connection to Chess Engine!")
+					alert("Потерянно соеденение к движку")
 					state = IDLE
 		PLAYER_TURN:
 			match event:
@@ -100,13 +100,13 @@ func handle_state(event, msg = ""):
 		PLAYER_WIN:
 			match event:
 				DONE:
-					print("Player won")
+					print("Игрок победил")
 					state = IDLE
 					set_next_color()
 		ENGINE_WIN:
 			match event:
 				DONE:
-					print("Engine won")
+					print("Движок победил")
 					state = IDLE
 					set_next_color()
 
@@ -188,7 +188,7 @@ func piece_clicked(piece):
 	# The z_index gets reset when we settle the piece back into
 	# it's resting position
 	piece.obj.z_index = 1
-	print("Board clicked ", selected_piece)
+	print("Доска нажата ", selected_piece)
 
 
 func piece_unclicked(piece):
@@ -199,7 +199,7 @@ func piece_unclicked(piece):
 func try_to_make_a_move(piece: Piece, non_player_move = true):
 	var info = board.get_position_info(piece, non_player_move)
 	# When Idle, we are not playing a game so the user may move the black pieces
-	print("try_to_make_a_move : ", info.ok)
+	print("Попробуй сделать шаг :", info.ok)
 	# Try to drop the piece
 	# Also check for castling and passant
 	var ok_to_move = false
@@ -209,7 +209,7 @@ func try_to_make_a_move(piece: Piece, non_player_move = true):
 			ok_to_move = true
 		else:
 			if info.passant and board.passant_pawn.pos.x == piece.new_pos.x:
-				print("passant")
+				print("пасант")
 				board.take_piece(board.passant_pawn)
 				ok_to_move = true
 			else:
@@ -229,7 +229,7 @@ func try_to_make_a_move(piece: Piece, non_player_move = true):
 						# Move rook
 						rook.new_pos = Vector2(rx, rook.pos.y)
 					else:
-						alert("Check")
+						alert("Шах")
 				else:
 					ok_to_move = false
 	if info.piece != null:
@@ -237,7 +237,7 @@ func try_to_make_a_move(piece: Piece, non_player_move = true):
 	if ok_to_move:
 		if piece.key == "K":
 			if board.is_king_checked(piece).checked:
-				alert("Cannot move into check position!")
+				alert("НЕЛЬЗЯ Двигаться в позицию Шаха!")
 			else:
 				if rook != null:
 					move_piece(rook, false)
@@ -248,7 +248,7 @@ func try_to_make_a_move(piece: Piece, non_player_move = true):
 			move_piece(piece)
 			var status = board.is_king_checked(piece)
 			if status.mated:
-				alert("Check Mate!")
+				alert("Шах и Мат!")
 				if status.side == "B":
 					state = PLAYER_WIN
 				else:
@@ -256,7 +256,7 @@ func try_to_make_a_move(piece: Piece, non_player_move = true):
 				handle_state(DONE)
 			else:
 				if status.checked:
-					alert("Check")
+					alert("Шах")
 	# Settle the piece precisely into position and reset it's z_order
 	return_piece(piece)
 
@@ -322,7 +322,7 @@ func _on_Board_fullmove(n):
 func _on_Board_halfmove(n):
 	$VBox/HBox/Grid/HalfMoves.text = str(n)
 	if n == 50:
-		alert("It's a draw!")
+		alert("Это ничья !")
 		state = IDLE
 
 
